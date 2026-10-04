@@ -1,0 +1,43 @@
+date,item,category,quantity,price,city
+2024-03-01,Notebook,Stationery,6,60,Pokhara
+2024-03-01,Tea,Grocery,3,150,Pokhara
+2024-03-02,Lentils,Grocery,3,190,Kathmandu
+2024-03-02,Detergent,Household,2,120,Kathmandu
+2024-03-03,Soap,Household,2,45,Pokhara
+2024-03-03,Rice,Grocery,6,130,Kathmandu
+2024-03-04,Soap,Household,7,45,Pokhara
+2024-03-04,Cooking Oil,Grocery,1,260,Butwal
+2024-03-05,Tea,Grocery,5,150,Pokhara
+2024-03-05,Notebook,Stationery,2,60,Butwal
+2024-03-06,Notebook,Stationery,2,60,Pokhara
+2024-03-06,Pen,Stationery,8,15,Butwal
+2024-03-07,Tea,Grocery,8,150,Pokhara
+2024-03-07,Notebook,Stationery,7,60,Kathmandu
+2024-03-08,Notebook,Stationery,2,60,Pokhara
+2024-03-08,Soap,Household,4,45,Pokhara
+2024-03-09,Pen,Stationery,8,15,Kathmandu
+2024-03-09,Detergent,Household,1,120,Butwal
+2024-03-10,Tea,Grocery,3,150,Kathmandu
+2024-03-10,Notebook,Stationery,3,60,Pokhara
+2024-03-11,Tea,Grocery,6,150,Pokhara
+2024-03-11,Detergent,Household,1,120,Kathmandu
+2024-03-12,Detergent,Household,4,120,Kathmandu
+2024-03-12,Cooking Oil,Grocery,3,260,Pokhara
+2024-03-13,Pen,Stationery,2,15,Pokhara
+2024-03-13,Soap,Household,1,45,Pokhara
+2024-03-14,Notebook,Stationery,7,60,Pokhara
+2024-03-14,Lentils,Grocery,8,190,Pokhara
+2024-03-15,Pen,Stationery,7,15,Pokhara
+2024-03-15,Rice,Grocery,6,130,Kathmandu
+2024-03-16,Soap,Household,4,45,Kathmandu
+2024-03-16,Cooking Oil,Grocery,3,260,Butwal
+2024-03-17,Cooking Oil,Grocery,4,260,Butwal
+2024-03-17,Lentils,Grocery,3,190,Kathmandu
+2024-03-18,Tea,Grocery,4,150,Kathmandu
+2024-03-18,Soap,Household,7,45,Kathmandu
+2024-03-19,Notebook,Stationery,3,60,Kathmandu
+2024-03-19,Tea,Grocery,5,150,Pokhara
+2024-03-20,Notebook,Stationery,8,60,Kathmandu
+2024-03-20,Tea,Grocery,8,150,Kathmandu
+2024-03-21,Tea,Grocery,6,150,Butwal
+2024-03-21,Cooking Oil,Grocery,3,260,Kathmandu

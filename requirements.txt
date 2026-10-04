@@ -1,0 +1,15 @@
+# Site build
+mkdocs>=1.6,<2
+mkdocs-material>=9.7,<10
+pymdown-extensions>=10.14
+
+# Libraries used by the code examples (the same ones students install with Anaconda)
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+plotly
+dash
+openpyxl
+requests

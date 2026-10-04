@@ -1,0 +1,589 @@
+/* DSC 481 notes: design tokens first, then Material's own properties, then components.
+   Every --ds-* token is defined in :root (light) and again under the slate scheme (dark). */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap");
+
+:root {
+  /* surfaces */
+  --ds-paper: #f7f8fa;
+  --ds-surface: #eef1f6;
+  --ds-surface-2: #e4e9f1;
+  --ds-rule: #cdd5e1;
+  /* ink */
+  --ds-ink: #14202e;
+  --ds-ink-2: #46536a;
+  --ds-muted: #566175;
+  /* brand */
+  --ds-primary: #0d366b;
+  --ds-on-primary: #ffffff;
+  --ds-header-bg: #0d366b;
+  --ds-link: #1c5cab;
+  --ds-accent: #8a4f00;
+  --ds-accent-soft: rgba(237, 161, 0, 0.18);
+  --ds-marigold: #eda100;
+  /* admonition colours */
+  --ds-c-note: #2a78d6;
+  --ds-c-tip: #0f8a63;
+  --ds-c-warn: #d4551f;
+  --ds-c-ask: #eda100;
+  --ds-c-ok: #3b8a2a;
+  --ds-c-bad: #c93c3c;
+  --ds-c-goal: #0d366b;
+  --ds-c-plain: #566175;
+  /* output blocks */
+  --ds-out-bg: #fbfcfd;
+  --ds-out-rule: #2a78d6;
+  /* syntax highlighting */
+  --ds-hl-keyword: #4a3aa7;
+  --ds-hl-string: #006300;
+  --ds-hl-number: #a8460b;
+  --ds-hl-function: #1c5cab;
+  --ds-hl-comment: #566175;
+  --ds-hl-special: #0b6b82;
+  --ds-hl-line: rgba(237, 161, 0, 0.22);
+  /* mermaid diagrams */
+  --ds-node-bg: #e4ecf8;
+  --ds-node-fg: #14202e;
+  --ds-edge: #46536a;
+  /* type and measure */
+  --ds-display: "Bricolage Grotesque", "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --ds-measure: 68ch;
+  --ds-line: 1.7;
+}
+
+[data-md-color-scheme="slate"] {
+  --ds-paper: #0f1520;
+  --ds-surface: #161e2c;
+  --ds-surface-2: #1e2840;
+  --ds-rule: #2b3a55;
+  --ds-ink: #e8ecf3;
+  --ds-ink-2: #b4bccb;
+  --ds-muted: #8b95a7;
+  --ds-primary: #7db4f2;
+  --ds-on-primary: #e8ecf3;
+  --ds-header-bg: #15233b;
+  --ds-link: #7db4f2;
+  --ds-accent: #ffc233;
+  --ds-accent-soft: rgba(255, 194, 51, 0.16);
+  --ds-marigold: #ffc233;
+  --ds-c-note: #5c9bf0;
+  --ds-c-tip: #3fc79a;
+  --ds-c-warn: #ff8a5c;
+  --ds-c-ask: #ffc233;
+  --ds-c-ok: #6bcf55;
+  --ds-c-bad: #ff7b7b;
+  --ds-c-goal: #7db4f2;
+  --ds-c-plain: #8b95a7;
+  --ds-out-bg: #0b111b;
+  --ds-out-rule: #5c9bf0;
+  --ds-hl-keyword: #a99dff;
+  --ds-hl-string: #5fd49a;
+  --ds-hl-number: #f2a65a;
+  --ds-hl-function: #7db4f2;
+  --ds-hl-comment: #8e99ae;
+  --ds-hl-special: #4fc3d9;
+  --ds-hl-line: rgba(255, 194, 51, 0.18);
+  --ds-node-bg: #1f2d4a;
+  --ds-node-fg: #e8ecf3;
+  --ds-edge: #b4bccb;
+  /* light text on a dark page reads heavier, so it gets a little more air */
+  --ds-display: "Bricolage Grotesque", "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --ds-measure: 68ch;
+  --ds-line: 1.78;
+}
+
+/* ---- Map the tokens onto Material's own properties ---- */
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-text-font: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --md-code-font: "JetBrains Mono", ui-monospace, monospace;
+
+  --md-primary-fg-color: var(--ds-header-bg);
+  --md-primary-fg-color--light: var(--ds-header-bg);
+  --md-primary-fg-color--dark: var(--ds-header-bg);
+  --md-primary-bg-color: var(--ds-on-primary);
+  --md-primary-bg-color--light: var(--ds-on-primary);
+  --md-accent-fg-color: var(--ds-accent);
+  --md-accent-fg-color--transparent: var(--ds-accent-soft);
+  --md-accent-bg-color: var(--ds-paper);
+
+  --md-default-bg-color: var(--ds-paper);
+  --md-default-bg-color--light: var(--ds-surface);
+  --md-default-bg-color--lighter: var(--ds-surface-2);
+  --md-default-bg-color--lightest: var(--ds-surface-2);
+  --md-default-fg-color: var(--ds-ink);
+  --md-default-fg-color--light: var(--ds-ink-2);
+  --md-default-fg-color--lighter: var(--ds-muted);
+  --md-default-fg-color--lightest: var(--ds-rule);
+
+  --md-typeset-color: var(--ds-ink);
+  --md-typeset-a-color: var(--ds-link);
+  --md-typeset-mark-color: var(--ds-accent-soft);
+  --md-typeset-table-color: var(--ds-rule);
+  --md-typeset-table-color--light: var(--ds-surface);
+
+  --md-code-bg-color: var(--ds-surface);
+  --md-code-fg-color: var(--ds-ink);
+  --md-code-hl-color: var(--ds-hl-line);
+  --md-code-hl-color--light: var(--ds-hl-line);
+  --md-code-hl-keyword-color: var(--ds-hl-keyword);
+  --md-code-hl-string-color: var(--ds-hl-string);
+  --md-code-hl-number-color: var(--ds-hl-number);
+  --md-code-hl-constant-color: var(--ds-hl-number);
+  --md-code-hl-function-color: var(--ds-hl-function);
+  --md-code-hl-special-color: var(--ds-hl-special);
+  --md-code-hl-comment-color: var(--ds-hl-comment);
+  --md-code-hl-name-color: var(--ds-ink);
+  --md-code-hl-variable-color: var(--ds-ink);
+  --md-code-hl-operator-color: var(--ds-ink-2);
+  --md-code-hl-punctuation-color: var(--ds-ink-2);
+  --md-code-hl-generic-color: var(--ds-ink);
+
+  --md-footer-bg-color: var(--ds-header-bg);
+  --md-footer-bg-color--dark: var(--ds-header-bg);
+  --md-footer-fg-color: var(--ds-on-primary);
+  --md-footer-fg-color--light: var(--ds-on-primary);
+  --md-footer-fg-color--lighter: var(--ds-ink-2);
+
+  --md-shadow-z1: none;
+  --md-shadow-z2: none;
+  --md-shadow-z3: none;
+
+  --md-mermaid-font-family: var(--md-text-font);
+  --md-mermaid-node-bg-color: var(--ds-node-bg);
+  --md-mermaid-node-fg-color: var(--ds-node-fg);
+  --md-mermaid-edge-color: var(--ds-edge);
+  --md-mermaid-label-bg-color: var(--ds-paper);
+  --md-mermaid-label-fg-color: var(--ds-ink);
+}
+
+/* ---- Page, reading size, and line length ---- */
+.md-grid {
+  max-width: 72rem;
+}
+
+.md-typeset {
+  font-size: 0.9rem;
+  line-height: var(--ds-line);
+  color: var(--ds-ink);
+}
+
+/* Running text stays near 68 characters per line */
+.md-typeset > p,
+.md-typeset > ul,
+.md-typeset > ol,
+.md-typeset > dl,
+.md-typeset > blockquote,
+.md-typeset .admonition > p,
+.md-typeset details > p {
+  max-width: var(--ds-measure);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  max-width: calc(var(--ds-measure) + 3rem);
+}
+
+/* ---- Headings ---- */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-header__title,
+.md-nav__title {
+  font-family: var(--ds-display);
+}
+
+.md-typeset h1 {
+  font-size: 2.3em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  color: var(--ds-ink);
+  margin: 0 0 1.2rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.55em;
+  font-weight: 800;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+  color: var(--ds-ink);
+  margin: 3rem 0 1rem;
+  padding-top: 1rem;
+  background:
+    linear-gradient(var(--ds-marigold), var(--ds-marigold)) top left / 3.4rem 4px no-repeat,
+    linear-gradient(var(--ds-rule), var(--ds-rule)) top left / 100% 1px no-repeat;
+}
+
+.md-typeset h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ds-primary);
+  margin: 2.2rem 0 0.6rem;
+}
+
+.md-typeset h4 {
+  font-weight: 600;
+  color: var(--ds-ink-2);
+}
+
+.md-typeset .headerlink {
+  color: var(--ds-muted);
+}
+
+/* ---- Header, navigation, footer ---- */
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--ds-rule);
+}
+
+.md-header__title {
+  font-weight: 600;
+}
+
+.md-nav__title {
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ds-muted);
+}
+
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: var(--ds-link);
+  font-weight: 700;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link {
+  font-family: var(--ds-display);
+  font-weight: 800;
+  color: var(--ds-ink);
+}
+
+.md-footer-meta {
+  background: var(--ds-header-bg);
+}
+
+/* ---- Links inside text ---- */
+.md-typeset a {
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset a:not(.headerlink):not(.md-button) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--ds-link) 45%, transparent);
+}
+
+/* ---- Code: large enough for a classroom projector ---- */
+.md-typeset code,
+.md-typeset kbd {
+  font-size: 0.92em;
+}
+
+.md-typeset pre > code {
+  font-size: 1em;
+  line-height: 1.55;
+}
+
+.md-typeset pre {
+  font-size: 0.88rem;
+}
+
+.md-typeset .highlight,
+.md-typeset .highlighttable {
+  margin: 1.2em 0;
+}
+
+.md-typeset pre > code {
+  border-radius: 0;
+  padding: 1rem 1.2rem;
+  background: var(--ds-surface);
+}
+
+.md-typeset p code,
+.md-typeset li code,
+.md-typeset td code,
+.md-typeset h2 code,
+.md-typeset h3 code {
+  background: var(--ds-surface-2);
+  border-radius: 0;
+  padding: 0.08em 0.35em;
+}
+
+/* Output blocks: plain text under a code block, set apart by a left rule */
+.md-typeset .output.highlight {
+  margin-top: -0.7em;
+}
+
+.md-typeset .output.highlight pre > code {
+  background: var(--ds-out-bg);
+  border-left: 4px solid var(--ds-out-rule);
+  color: var(--ds-ink);
+}
+
+/* Long output lines (server warnings, error messages) wrap instead of hiding behind a scrollbar */
+.md-typeset .output.highlight pre > code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.md-typeset .output.highlight .filename {
+  display: block;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem 1.2rem 0;
+  font-family: var(--ds-display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ds-muted);
+  background: var(--ds-out-bg);
+  border-left: 4px solid var(--ds-out-rule);
+}
+
+.md-typeset .output.highlight .filename + pre > code {
+  padding-top: 0.2rem;
+}
+
+/* Titled code blocks that are files (helpers.py, app.py) */
+.md-typeset .highlight .filename {
+  font-family: var(--md-code-font);
+  font-size: 0.8rem;
+}
+
+.md-clipboard {
+  color: var(--ds-muted);
+}
+
+/* ---- Admonitions: a left bar, no rounded corners, no shadows ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  --ds-adm: var(--ds-c-note);
+  border: 0;
+  border-left: 0.3rem solid var(--ds-adm);
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--ds-surface);
+  color: var(--ds-ink);
+  font-size: 0.95em;
+  margin: 1.6em 0;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: var(--ds-adm) !important;
+}
+
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  background-color: transparent !important;
+  border: 0;
+  font-family: var(--ds-display);
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  color: var(--ds-ink);
+}
+
+.md-typeset .admonition > .admonition-title::before,
+.md-typeset details > summary::before {
+  background-color: var(--ds-adm) !important;
+}
+
+.md-typeset summary::after {
+  color: var(--ds-muted);
+}
+
+.md-typeset .note,
+.md-typeset .info { --ds-adm: var(--ds-c-note); }
+.md-typeset .tip,
+.md-typeset .hint { --ds-adm: var(--ds-c-tip); }
+.md-typeset .warning,
+.md-typeset .caution { --ds-adm: var(--ds-c-warn); }
+.md-typeset .danger,
+.md-typeset .failure,
+.md-typeset .bug { --ds-adm: var(--ds-c-bad); }
+.md-typeset .success { --ds-adm: var(--ds-c-ok); }
+.md-typeset .abstract { --ds-adm: var(--ds-c-goal); }
+.md-typeset .question,
+.md-typeset .ask { --ds-adm: var(--ds-c-ask); }
+.md-typeset .example,
+.md-typeset .quote { --ds-adm: var(--ds-c-plain); }
+
+/* Custom "Ask the Class" box reuses Material's question-mark icon */
+.md-typeset .ask > .admonition-title::before,
+.md-typeset .ask > summary::before {
+  -webkit-mask-image: var(--md-admonition-icon--question);
+  mask-image: var(--md-admonition-icon--question);
+}
+
+/* ---- Tables ---- */
+.md-typeset table:not([class]) {
+  font-size: 0.82rem;
+  box-shadow: none;
+  border: 1px solid var(--ds-rule);
+  border-radius: 0;
+  background: transparent;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--ds-surface-2);
+  color: var(--ds-ink);
+  font-family: var(--ds-display);
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  padding: 0.55em 1em;
+  border-top: 1px solid var(--ds-rule);
+}
+
+/* ---- Cards on the home page ---- */
+.md-typeset .grid.cards > ul {
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--ds-rule);
+  border-top: 4px solid var(--ds-primary);
+  border-radius: 0;
+  background: var(--ds-surface);
+  padding: 0.9rem 1rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--ds-marigold);
+  border-top-color: var(--ds-marigold);
+  box-shadow: none;
+}
+
+.md-typeset .grid.cards > ul > li > p:first-child {
+  font-family: var(--ds-display);
+  font-size: 1.05em;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.6rem 0;
+  border-color: var(--ds-rule);
+}
+
+.md-typeset .grid.cards > ul > li > p {
+  max-width: none;
+}
+
+/* ---- Interactive plots (Plotly HTML in an iframe, one file per scheme) ---- */
+.ds-plotly {
+  width: 100%;
+  height: 28rem;
+  border: 1px solid var(--ds-rule);
+  margin: 1.4em 0;
+  background: var(--ds-paper);
+}
+
+[data-md-color-scheme="slate"] .ds-only-light,
+[data-md-color-scheme="default"] .ds-only-dark {
+  display: none;
+}
+
+/* ---- Small pieces ---- */
+.md-typeset hr {
+  border-color: var(--ds-rule);
+}
+
+.md-typeset img {
+  display: block;
+  margin: 1.4em 0;
+}
+
+/* Screenshots of other programs get a hairline frame (plots do not) */
+.md-typeset img.ds-shot {
+  border: 1px solid var(--ds-rule);
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset figure {
+  margin: 1.4em 0;
+}
+
+.md-typeset figcaption {
+  color: var(--ds-muted);
+  font-size: 0.8em;
+}
+
+.md-typeset .mermaid {
+  margin: 1.4em 0;
+}
+
+.md-typeset del {
+  background: transparent;
+}
+
+.md-typeset :target > .headerlink,
+.md-typeset :target {
+  scroll-margin-top: 4rem;
+}
+
+/* Key facts strip on the home page */
+.ds-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 0;
+  margin: 1.4rem 0 2rem;
+  border-top: 2px solid var(--ds-ink);
+  border-bottom: 1px solid var(--ds-rule);
+}
+
+.ds-facts > div {
+  padding: 0.8rem 0.9rem 0.9rem 0;
+}
+
+.ds-facts dt,
+.ds-facts .ds-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ds-muted);
+}
+
+.ds-facts .ds-value {
+  display: block;
+  font-family: var(--ds-display);
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  color: var(--ds-primary);
+}
+
+.ds-facts .ds-value.ds-text {
+  font-size: 1.1rem;
+  padding-top: 0.4rem;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset {
+    font-size: 0.88rem;
+  }
+  .md-typeset h1 {
+    font-size: 1.9em;
+  }
+  .md-typeset pre {
+    font-size: 0.85rem;
+  }
+}
+
+@media print {
+  .md-typeset details:not([open]) > :not(summary) {
+    display: block;
+  }
+}

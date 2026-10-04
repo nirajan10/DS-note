@@ -1,0 +1,82 @@
+[
+  {
+    "roll": 1,
+    "name": "Asha",
+    "math": 78,
+    "science": 85,
+    "english": 72,
+    "attendance": 92
+  },
+  {
+    "roll": 2,
+    "name": "Bikash",
+    "math": 64,
+    "science": 58,
+    "english": 70,
+    "attendance": 85
+  },
+  {
+    "roll": 3,
+    "name": "Chandra",
+    "math": 92,
+    "science": 88,
+    "english": 81,
+    "attendance": 97
+  },
+  {
+    "roll": 4,
+    "name": "Dipesh",
+    "math": 45,
+    "science": 52,
+    "english": 48,
+    "attendance": 70
+  },
+  {
+    "roll": 5,
+    "name": "Elina",
+    "math": 88,
+    "science": 91,
+    "english": 95,
+    "attendance": 98
+  },
+  {
+    "roll": 6,
+    "name": "Gita",
+    "math": 56,
+    "science": 61,
+    "english": 66,
+    "attendance": 80
+  },
+  {
+    "roll": 7,
+    "name": "Hari",
+    "math": 73,
+    "science": 69,
+    "english": 77,
+    "attendance": 88
+  },
+  {
+    "roll": 8,
+    "name": "Isha",
+    "math": 81,
+    "science": 79,
+    "english": 84,
+    "attendance": 94
+  },
+  {
+    "roll": 9,
+    "name": "Jiwan",
+    "math": 39,
+    "science": 44,
+    "english": 50,
+    "attendance": 65
+  },
+  {
+    "roll": 10,
+    "name": "Kiran",
+    "math": 67,
+    "science": 72,
+    "english": 63,
+    "attendance": 83
+  }
+]

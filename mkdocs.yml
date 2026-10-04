@@ -1,0 +1,104 @@
+site_name: Fundamentals of Data Science
+site_description: Lecture notes and lab sheets for DSC 481 Fundamentals of Data Science, BCSIT, Pokhara University.
+copyright: DSC 481 course notes, BCSIT, Pokhara University
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Atkinson Hyperlegible Next
+    code: JetBrains Mono
+  features:
+    - content.code.copy
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra:
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+# Mermaid is bundled locally so diagrams also render without internet.
+extra_javascript:
+  - assets/js/mermaid.min.js
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+plugins:
+  - search
+  # Downloads the Google Fonts once at build time and serves them from the site itself,
+  # so the notes look the same in a classroom without internet. The first build needs
+  # internet (files are cached in .cache/). To skip it: PRIVACY_PLUGIN=false make build
+  - privacy:
+      enabled: !ENV [PRIVACY_PLUGIN, true]
+      assets_exclude:
+        - unpkg.com/mermaid*      # Mermaid is already bundled in docs/assets/js/
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Start Here:
+      - Setting Up Python: setup.md
+  - Units:
+      - "I: Data Science and Python": unit-01-intro.md
+      - "II: Python Basics and Operators": unit-02-basics.md
+      - "III: Control Structures": unit-03-control.md
+      - "IV: Functions and Modules": unit-04-functions.md
+      - "V: Data Structures": unit-05-structures.md
+      - "VI: File Handling and Exceptions": unit-06-files.md
+      - "VII: Data Collection and Cleaning": unit-07-cleaning.md
+      - "VIII: Exploratory Data Analysis": unit-08-eda.md
+      - "IX: Machine Learning": unit-09-ml.md
+      - "X: Visualization and Reporting": unit-10-visualization.md
+      - "XI: Practical Lab Work": unit-11-lab.md
+  - Practice:
+      - Lab Sheets: practicals.md
+      - Exam Questions: exam-questions.md
+  - References: references.md

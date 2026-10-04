@@ -1,0 +1,49 @@
+{
+  "city": "Pokhara",
+  "country": "Nepal",
+  "unit": "celsius",
+  "forecast": [
+    {
+      "day": "Sun",
+      "temp_max": 27,
+      "temp_min": 17,
+      "rain_mm": 0.0
+    },
+    {
+      "day": "Mon",
+      "temp_max": 26,
+      "temp_min": 18,
+      "rain_mm": 4.2
+    },
+    {
+      "day": "Tue",
+      "temp_max": 24,
+      "temp_min": 17,
+      "rain_mm": 12.5
+    },
+    {
+      "day": "Wed",
+      "temp_max": 23,
+      "temp_min": 16,
+      "rain_mm": 20.1
+    },
+    {
+      "day": "Thu",
+      "temp_max": 25,
+      "temp_min": 17,
+      "rain_mm": 6.8
+    },
+    {
+      "day": "Fri",
+      "temp_max": 28,
+      "temp_min": 18,
+      "rain_mm": 0.0
+    },
+    {
+      "day": "Sat",
+      "temp_max": 29,
+      "temp_min": 19,
+      "rain_mm": 0.5
+    }
+  ]
+}
