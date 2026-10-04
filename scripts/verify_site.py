@@ -300,18 +300,21 @@ def check_facts():
         for needed in ("## Quick Recap", "## Try It Yourself", "## Exam Questions for This Unit"):
             if needed not in page:
                 bad("FACT", f"{stem}.md", f"missing section '{needed}'")
-        anchor = f"exam-questions.md#unit-{ROMAN[n].lower()}-"
+        anchor = f"exam/unit-{n:02d}.md"
         if anchor not in page:
             bad("FACT", f"{stem}.md", f"no link into the exam page ({anchor}...)")
     if hours != TOTAL_HOURS:
         bad("FACT", "units", f"unit hours add up to {hours}, expected {TOTAL_HOURS}")
-    labs = re.findall(r"^## Lab (\d+): ", read("practicals.md"), flags=re.M)
-    if labs != [str(i) for i in range(1, LABS + 1)]:
-        bad("FACT", "practicals.md", f"expected Lab 1..{LABS}, found {labs}")
-    exam = read("exam-questions.md")
+    for i in range(1, LABS + 1):
+        lab = DOCS / "labs" / f"lab-{i:02d}.md"
+        if not lab.exists() or not re.match(rf"# Lab {i}: ", lab.read_text(encoding="utf-8")):
+            bad("FACT", f"labs/lab-{i:02d}.md", f"missing, or its H1 is not '# Lab {i}: ...'")
+    labs = list(range(1, LABS + 1))
     for n, (stem, title, *_rest) in UNITS.items():
-        if f"## Unit {ROMAN[n]}: {title}\n" not in exam:
-            bad("FACT", "exam-questions.md", f"missing section '## Unit {ROMAN[n]}: {title}'")
+        ex = DOCS / "exam" / f"unit-{n:02d}.md"
+        first = ex.read_text(encoding="utf-8").split("\n", 1)[0] if ex.exists() else ""
+        if first != f"# Unit {ROMAN[n]} Exam Questions: {title}":
+            bad("FACT", f"exam/unit-{n:02d}.md", f"H1 should be '# Unit {ROMAN[n]} Exam Questions: {title}'")
     print(f"  units: {len(UNITS)}, hours: {hours}, labs: {len(labs)}")
 
 
@@ -358,7 +361,7 @@ def heading_problems(text):
 
 
 def check_headings():
-    for path in sorted(DOCS.glob("*.md")):
+    for path in sorted(DOCS.rglob("*.md")):
         fence = False
         for ln, line in enumerate(path.read_text(encoding="utf-8").split("\n"), 1):
             if line.lstrip().startswith("```"):
@@ -368,7 +371,7 @@ def check_headings():
                 text = re.sub(r"\s*\{[^}]*\}$", "", m.group(2))
                 words = heading_problems(text)
                 if words:
-                    bad("HEADING", f"{path.name}:{ln}", f"not Title Case ({', '.join(words)}): {text}")
+                    bad("HEADING", f"{path.relative_to(DOCS)}:{ln}", f"not Title Case ({', '.join(words)}): {text}")
 
 
 def main():

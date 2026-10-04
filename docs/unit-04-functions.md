@@ -541,4 +541,4 @@ In a Jupyter notebook or Google Colab, write `!pip install pandas` in a cell. An
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit IV: Functions and Modules](exam-questions.md#unit-iv-functions-and-modules).
+Past-paper and practice questions for this unit are collected in [Unit IV: Functions and Modules](exam/unit-04.md).

@@ -221,3 +221,4 @@ __marimo__/
 
 # MkDocs privacy plugin cache
 .cache/
+/site-all

@@ -22,10 +22,28 @@ make build       # strict build into ./site
 The first `make build` or `make serve` downloads the web fonts once and stores them in `.cache/`, so later builds
 and the finished site work without internet. For a fully offline build, run it with `PRIVACY_PLUGIN=false`.
 
+## Releasing topics gradually
+
+Only the pages listed in `nav:` in `mkdocs.yml` are published. Everything else is **not built at all** (no page,
+no URL, no search result), and links to it become plain text. Each topic has three lines in the nav: its note
+(`unit-NN-*.md`), its lab sheet (`labs/lab-NN.md`, Units I to X) and its exam questions (`exam/unit-NN.md`).
+
+1. Open `mkdocs.yml` and remove the `# ` in front of the topic's lines. Each line is independent, so
+   uncommenting one topic never reveals another.
+2. Rebuild and publish: `make build` (output in `site/`), or watch it live with `make serve`.
+3. To hide a topic again, put the `# ` back.
+
+`make build-all` builds the whole course (every topic released, via `mkdocs-all.yml`) into `site-all/`. That is
+for checking only; do not give it to students. One limit: images and data files of a hidden topic are still
+copied into `site/assets/`, so someone who guesses a file name could open it. The pages and their text are not
+there.
+
 ## Layout
 
 ```
-docs/                 the notes (one page per unit, plus setup, lab sheets, exam questions, references)
+docs/                 notes (unit-NN-*.md), labs/lab-NN.md, exam/unit-NN.md, plus index, setup, references
+hooks/release.py      publishes only the pages listed in the nav (see above)
+mkdocs-all.yml        the same site with every topic released (for checks)
 docs/assets/data/     practice datasets (small CSV, JSON, XLSX files and one zip)
 docs/assets/img/      generated figures (do not edit by hand; run make figures)
 docs/stylesheets/     the site design (colour tokens for light and dark, fonts, layout)

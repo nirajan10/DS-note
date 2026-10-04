@@ -873,4 +873,4 @@ The syllabus does not give an internal marking scheme for Unit XI, so the instru
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit XI: Practical Lab Work](exam-questions.md#unit-xi-practical-lab-work).
+Past-paper and practice questions for this unit are collected in [Unit XI: Practical Lab Work](exam/unit-11.md).

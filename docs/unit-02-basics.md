@@ -405,4 +405,4 @@ print(age + 1)
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit II: Python Programming Basics and Operators](exam-questions.md#unit-ii-python-programming-basics-and-operators).
+Past-paper and practice questions for this unit are collected in [Unit II: Python Programming Basics and Operators](exam/unit-02.md).

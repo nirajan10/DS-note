@@ -655,4 +655,4 @@ dtype: object
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit VII: Data Collection and Cleaning with Python](exam-questions.md#unit-vii-data-collection-and-cleaning-with-python).
+Past-paper and practice questions for this unit are collected in [Unit VII: Data Collection and Cleaning with Python](exam/unit-07.md).

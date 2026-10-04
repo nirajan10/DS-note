@@ -556,4 +556,4 @@ Sorry, mark.txt was not found
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit VI: File Handling and Exception](exam-questions.md#unit-vi-file-handling-and-exception).
+Past-paper and practice questions for this unit are collected in [Unit VI: File Handling and Exception](exam/unit-06.md).

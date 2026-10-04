@@ -415,4 +415,4 @@ Total of present students: 322
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit III: Control Structures](exam-questions.md#unit-iii-control-structures).
+Past-paper and practice questions for this unit are collected in [Unit III: Control Structures](exam/unit-03.md).

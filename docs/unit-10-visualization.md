@@ -489,4 +489,4 @@ The data did not change. Only the care taken changed. In a dashboard, the same r
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit X: Data Visualization and Reporting](exam-questions.md#unit-x-data-visualization-and-reporting).
+Past-paper and practice questions for this unit are collected in [Unit X: Data Visualization and Reporting](exam/unit-10.md).

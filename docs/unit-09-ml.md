@@ -949,4 +949,4 @@ The score is about the same as with hours alone. Adding `attendance` did not hel
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit IX: Introduction to Machine Learning with Python](exam-questions.md#unit-ix-introduction-to-machine-learning-with-python).
+Past-paper and practice questions for this unit are collected in [Unit IX: Introduction to Machine Learning with Python](exam/unit-09.md).

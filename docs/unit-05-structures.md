@@ -746,4 +746,4 @@ Topper: Sita with 180
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit V: Data Structures in Python](exam-questions.md#unit-v-data-structures-in-python).
+Past-paper and practice questions for this unit are collected in [Unit V: Data Structures in Python](exam/unit-05.md).

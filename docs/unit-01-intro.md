@@ -298,4 +298,4 @@ Hello, Data Science!
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit I: Introduction to Data Science and Python](exam-questions.md#unit-i-introduction-to-data-science-and-python).
+Past-paper and practice questions for this unit are collected in [Unit I: Introduction to Data Science and Python](exam/unit-01.md).

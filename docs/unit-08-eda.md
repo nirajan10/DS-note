@@ -739,4 +739,4 @@ The same care applies to our own data. Hours studied and marks have r = 0.94, an
 
 ## Exam Questions for This Unit
 
-Past-paper and practice questions for this unit are collected in [Unit VIII: Exploratory Data Analysis](exam-questions.md#unit-viii-exploratory-data-analysis).
+Past-paper and practice questions for this unit are collected in [Unit VIII: Exploratory Data Analysis](exam/unit-08.md).

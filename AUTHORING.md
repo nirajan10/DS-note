@@ -31,21 +31,21 @@ Heading case: Title Case for prose headings. Keep code spans exactly as written 
 
 ### Unit titles and anchors
 
-| Page | H1 | Anchor in `exam-questions.md` |
+| Page | H1 | Exam page |
 |---|---|---|
-| `unit-01-intro.md` (3 h) | Unit I: Introduction to Data Science and Python | `#unit-i-introduction-to-data-science-and-python` |
-| `unit-02-basics.md` (3 h) | Unit II: Python Programming Basics and Operators | `#unit-ii-python-programming-basics-and-operators` |
-| `unit-03-control.md` (4 h) | Unit III: Control Structures | `#unit-iii-control-structures` |
-| `unit-04-functions.md` (4 h) | Unit IV: Functions and Modules | `#unit-iv-functions-and-modules` |
-| `unit-05-structures.md` (5 h) | Unit V: Data Structures in Python | `#unit-v-data-structures-in-python` |
-| `unit-06-files.md` (4 h) | Unit VI: File Handling and Exception | `#unit-vi-file-handling-and-exception` |
-| `unit-07-cleaning.md` (4 h) | Unit VII: Data Collection and Cleaning with Python | `#unit-vii-data-collection-and-cleaning-with-python` |
-| `unit-08-eda.md` (5 h) | Unit VIII: Exploratory Data Analysis | `#unit-viii-exploratory-data-analysis` |
-| `unit-09-ml.md` (6 h) | Unit IX: Introduction to Machine Learning with Python | `#unit-ix-introduction-to-machine-learning-with-python` |
-| `unit-10-visualization.md` (4 h) | Unit X: Data Visualization and Reporting | `#unit-x-data-visualization-and-reporting` |
-| `unit-11-lab.md` (6 h) | Unit XI: Practical Lab Work | `#unit-xi-practical-lab-work` |
+| `unit-01-intro.md` (3 h) | Unit I: Introduction to Data Science and Python | `exam/unit-01.md` |
+| `unit-02-basics.md` (3 h) | Unit II: Python Programming Basics and Operators | `exam/unit-02.md` |
+| `unit-03-control.md` (4 h) | Unit III: Control Structures | `exam/unit-03.md` |
+| `unit-04-functions.md` (4 h) | Unit IV: Functions and Modules | `exam/unit-04.md` |
+| `unit-05-structures.md` (5 h) | Unit V: Data Structures in Python | `exam/unit-05.md` |
+| `unit-06-files.md` (4 h) | Unit VI: File Handling and Exception | `exam/unit-06.md` |
+| `unit-07-cleaning.md` (4 h) | Unit VII: Data Collection and Cleaning with Python | `exam/unit-07.md` |
+| `unit-08-eda.md` (5 h) | Unit VIII: Exploratory Data Analysis | `exam/unit-08.md` |
+| `unit-09-ml.md` (6 h) | Unit IX: Introduction to Machine Learning with Python | `exam/unit-09.md` |
+| `unit-10-visualization.md` (4 h) | Unit X: Data Visualization and Reporting | `exam/unit-10.md` |
+| `unit-11-lab.md` (6 h) | Unit XI: Practical Lab Work | `exam/unit-11.md` |
 
-Other pages: `index.md`, `setup.md`, `practicals.md`, `exam-questions.md`, `references.md`. Link between pages with relative `.md` links (`[Unit III](unit-03-control.md)`). `mkdocs build --strict` checks every link and every `#anchor`.
+Other pages: `index.md`, `setup.md`, `references.md`, the lab overview `practicals.md` and one lab sheet per file in `labs/lab-NN.md`, the exam overview `exam-questions.md` and one exam page per unit in `exam/unit-NN.md`. Pages in subfolders use `../` in links and image paths. Pages are published only if they are in the nav (see README, "Releasing topics gradually"); add every new page to BOTH `mkdocs.yml` (commented) and `mkdocs-all.yml`. Link between pages with relative `.md` links (`[Unit III](unit-03-control.md)`). `mkdocs build --strict` checks every link and every `#anchor`.
 
 ## Code examples and their output
 
