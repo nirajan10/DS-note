@@ -95,41 +95,41 @@ nav:
   # ---- Notes (one page per unit) ----
   - Units:
       - "I: Data Science and Python": unit-01-intro.md
-      - "II: Python Basics and Operators": unit-02-basics.md
-      - "III: Control Structures": unit-03-control.md
-      - "IV: Functions and Modules": unit-04-functions.md
-      - "V: Data Structures": unit-05-structures.md
-      - "VI: File Handling and Exceptions": unit-06-files.md
-      - "VII: Data Collection and Cleaning": unit-07-cleaning.md
-      - "VIII: Exploratory Data Analysis": unit-08-eda.md
-      - "IX: Machine Learning": unit-09-ml.md
-      - "X: Visualization and Reporting": unit-10-visualization.md
-      - "XI: Practical Lab Work": unit-11-lab.md
+      # - "II: Python Basics and Operators": unit-02-basics.md
+      # - "III: Control Structures": unit-03-control.md
+      # - "IV: Functions and Modules": unit-04-functions.md
+      # - "V: Data Structures": unit-05-structures.md
+      # - "VI: File Handling and Exceptions": unit-06-files.md
+      # - "VII: Data Collection and Cleaning": unit-07-cleaning.md
+      # - "VIII: Exploratory Data Analysis": unit-08-eda.md
+      # - "IX: Machine Learning": unit-09-ml.md
+      # - "X: Visualization and Reporting": unit-10-visualization.md
+      # - "XI: Practical Lab Work": unit-11-lab.md
   # ---- Lab sheets (Lab N goes with Unit N; Unit XI has no separate lab sheet) ----
   - Lab Sheets:
       - Overview: practicals.md
       - "Lab 1: Set Up Python and Run a First Script": labs/lab-01.md
-      - "Lab 2: Variables, Data Types and Operators": labs/lab-02.md
-      - "Lab 3: Conditions, Loops, Break and Continue": labs/lab-03.md
-      - "Lab 4: Functions and Modules": labs/lab-04.md
-      - "Lab 5: Lists, Tuples, Sets and Dictionaries": labs/lab-05.md
-      - "Lab 6: Files, CSV, JSON and Exceptions": labs/lab-06.md
-      - "Lab 7: Import and Clean a Dataset": labs/lab-07.md
-      - "Lab 8: Descriptive Statistics and Visualization": labs/lab-08.md
-      - "Lab 9: Build Machine Learning Models": labs/lab-09.md
-      - "Lab 10: Dashboards and Interactive Plots": labs/lab-10.md
+      # - "Lab 2: Variables, Data Types and Operators": labs/lab-02.md
+      # - "Lab 3: Conditions, Loops, Break and Continue": labs/lab-03.md
+      # - "Lab 4: Functions and Modules": labs/lab-04.md
+      # - "Lab 5: Lists, Tuples, Sets and Dictionaries": labs/lab-05.md
+      # - "Lab 6: Files, CSV, JSON and Exceptions": labs/lab-06.md
+      # - "Lab 7: Import and Clean a Dataset": labs/lab-07.md
+      # - "Lab 8: Descriptive Statistics and Visualization": labs/lab-08.md
+      # - "Lab 9: Build Machine Learning Models": labs/lab-09.md
+      # - "Lab 10: Dashboards and Interactive Plots": labs/lab-10.md
   # ---- Exam questions (one page per unit) ----
   - Exam Questions:
       - Overview: exam-questions.md
       - "Unit I: Data Science and Python": exam/unit-01.md
-      - "Unit II: Python Basics and Operators": exam/unit-02.md
-      - "Unit III: Control Structures": exam/unit-03.md
-      - "Unit IV: Functions and Modules": exam/unit-04.md
-      - "Unit V: Data Structures": exam/unit-05.md
-      - "Unit VI: File Handling and Exceptions": exam/unit-06.md
-      - "Unit VII: Data Collection and Cleaning": exam/unit-07.md
-      - "Unit VIII: Exploratory Data Analysis": exam/unit-08.md
-      - "Unit IX: Machine Learning": exam/unit-09.md
-      - "Unit X: Visualization and Reporting": exam/unit-10.md
-      - "Unit XI: Practical Lab Work": exam/unit-11.md
+      # - "Unit II: Python Basics and Operators": exam/unit-02.md
+      # - "Unit III: Control Structures": exam/unit-03.md
+      # - "Unit IV: Functions and Modules": exam/unit-04.md
+      # - "Unit V: Data Structures": exam/unit-05.md
+      # - "Unit VI: File Handling and Exceptions": exam/unit-06.md
+      # - "Unit VII: Data Collection and Cleaning": exam/unit-07.md
+      # - "Unit VIII: Exploratory Data Analysis": exam/unit-08.md
+      # - "Unit IX: Machine Learning": exam/unit-09.md
+      # - "Unit X: Visualization and Reporting": exam/unit-10.md
+      # - "Unit XI: Practical Lab Work": exam/unit-11.md
   - References: references.md
