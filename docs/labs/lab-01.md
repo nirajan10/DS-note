@@ -11,7 +11,7 @@ Get a working Python on your computer, or in the browser, and run your first **s
 
 ## Steps
 
-1. Set up one tool. On your computer, follow [Option 1: Anaconda](../setup.md#option-1-anaconda-on-your-computer), [Option 1B: Miniconda](../setup.md#option-1b-miniconda-the-light-alternative) if disk space is small, or [Option 1C: Plain Python](../setup.md#option-1c-plain-python-with-venv-and-pip) if you do not want conda, and then [Opening Jupyter Notebook](../setup.md#opening-jupyter-notebook). In a browser, follow [Option 2: Google Colab](../setup.md#option-2-google-colab).
+1. Set up one tool. On your computer, follow [Option 1: Anaconda](../setup.md#option-1-anaconda-on-your-computer), [Option 1B: Miniconda](../setup.md#option-1b-miniconda-the-light-alternative) if disk space is small, or [Option 1C: Plain Python](../setup.md#option-1c-plain-python-with-venv-and-pip) if you do not want conda, and then [Opening Jupyter Notebook](../setup.md#opening-jupyter-notebook), or work in [Visual Studio Code](../setup.md#option-3-visual-studio-code). In a browser, follow [Option 2: Google Colab](../setup.md#option-2-google-colab).
 2. Make a new folder called `lab1`. Create a file named `hello.py` inside it, as shown in [Running a Script From the Terminal](../setup.md#running-a-script-from-the-terminal). In Jupyter or Colab, open a new notebook instead.
 3. Type the starter code below.
 4. Run it. In a terminal, type `python hello.py`. In Jupyter or Colab, press `Shift+Enter` on the cell.

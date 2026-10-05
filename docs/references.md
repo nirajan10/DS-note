@@ -48,6 +48,7 @@ Chapter titles are from the publishers' tables of contents. Use them as a readin
 | Anaconda | One installer with Python and the data science libraries | [Download Anaconda](https://www.anaconda.com/download) |
 | Miniconda | A small installer with Python and conda only; you add the libraries | [Download Miniconda](https://www.anaconda.com/download) (same page) |
 | Jupyter | Notebooks that mix code, results and notes | [Project Jupyter](https://jupyter.org/) and the [Jupyter documentation](https://docs.jupyter.org/en/latest/) |
+| Visual Studio Code | An editor for scripts and notebooks | [Download VS Code](https://code.visualstudio.com/download) and the [Python in VS Code tutorial](https://code.visualstudio.com/docs/python/python-tutorial) |
 | Python with `venv` and `pip` | Plain Python, no conda | [Python downloads](https://www.python.org/downloads/) and the [venv documentation](https://docs.python.org/3/library/venv.html) |
 | Google Colab | Notebooks in the browser, with nothing to install | [Google Colab](https://colab.research.google.com/) and its [FAQ](https://research.google.com/colaboratory/faq.html) |
 

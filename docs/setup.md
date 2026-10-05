@@ -1,6 +1,6 @@
 # Setting Up Python
 
-This page gets Python working on your computer, or in your browser, so you can run every example in these notes. Do this once, before Unit II. It takes about 20 to 30 minutes, mostly waiting for a download. You need the ideas from [Unit I, section 1.2](unit-01-intro.md#12-python-environment-setup-anaconda-jupyter-notebook-google-colab) first: what Anaconda, Jupyter Notebook and Google Colab are. Miniconda (the light version of Anaconda) and plain Python with `venv` and `pip` (no conda at all) are covered here too.
+This page gets Python working on your computer, or in your browser, so you can run every example in these notes. Do this once, before Unit II. It takes about 20 to 30 minutes, mostly waiting for a download. You need the ideas from [Unit I, section 1.2](unit-01-intro.md#12-python-environment-setup-anaconda-jupyter-notebook-google-colab) first: what Anaconda, Jupyter Notebook and Google Colab are. Miniconda (the light version of Anaconda) and plain Python with `venv` and `pip` (no conda at all) are covered here too. So is Visual Studio Code, an editor you can use with any of them.
 
 ## Choose Your Tool
 
@@ -21,7 +21,14 @@ flowchart TD
     B -- "Everything ready" --> E["Option 1:<br/>Anaconda"]
     B -- "Smaller, uses conda" --> D["Option 1B:<br/>Miniconda"]
     B -- "Smallest, no conda" --> F["Option 1C:<br/>Plain Python"]
+    E --> G{"Do you prefer an editor<br/>to the browser?"}
+    D --> G
+    F --> G
+    G -- Yes --> H["Option 3: add<br/>Visual Studio Code"]
+    G -- No --> I["Open Jupyter Notebook<br/>in the browser"]
 ```
+
+**Visual Studio Code** (Option 3) is not a fourth choice of Python. It is an editor that you can add on top of Option 1, 1B or 1C if you prefer it to the browser.
 
 Many students do both a local tool and Colab. Your own Python is your main tool at home, and Colab is the backup when you are on someone else's computer.
 
@@ -262,6 +269,77 @@ Colab does not have your files. You upload them for each session.
 !!! warning "Common Mistake"
 
     Expecting uploaded files to stay. Colab runs on a temporary computer. When the session ends, that computer is deleted, and the files you uploaded are deleted with it. Your notebook is kept in Google Drive, but the data is not. Keep your own copy of every data file, and upload it again at the start of the next session.
+
+## Option 3: Visual Studio Code
+
+**Visual Studio Code** (VS Code) is a free code editor from Microsoft. You write and run Python inside it, and it can also open notebooks, so you do not need a browser for Jupyter. VS Code is **not** Python itself. It uses a Python that is already installed, so first finish **Option 1, 1B or 1C**, then come back here. (Colab, Option 2, needs no editor.)
+
+### Install VS Code
+
+Download the installer for your system from [code.visualstudio.com/download](https://code.visualstudio.com/download).
+
+=== "Windows"
+
+    1. Download the Windows installer, a `.exe` file, and double-click it.
+    2. Accept the license and keep the default folder.
+    3. Tick the box to add VS Code to your `PATH`. This lets you start it by typing `code` in a terminal.
+    4. Finish the install. Open VS Code from the Start menu or the desktop shortcut.
+
+=== "macOS"
+
+    1. Download the `.zip` file and unzip it.
+    2. Drag **Visual Studio Code.app** into your **Applications** folder.
+    3. Open **Applications** and double-click the app.
+    4. Optional: to start VS Code from the terminal, press `Cmd+Shift+P`, type `shell command` and choose the option that installs the `code` command.
+
+=== "Linux"
+
+    On Ubuntu or Debian, download the `.deb` file, then install it from the folder where it was saved. Use the real file name in place of the part in angle brackets:
+
+    ```bash
+    sudo apt install ./<file>.deb
+    ```
+
+    For other Linux systems, follow the instructions for your system on the download page.
+
+### Add the Python and Jupyter Extensions
+
+An **extension** adds a feature to VS Code. You need two, both published by Microsoft.
+
+1. Click the **Extensions** icon in the bar on the left (or press `Ctrl+Shift+X`; on macOS `Cmd+Shift+X`).
+2. Search for **Python**, find the one by **Microsoft** and click **Install**.
+3. Search for **Jupyter**, find the one by **Microsoft** and click **Install**.
+
+### Open Your Course Folder
+
+Choose **File**, then **Open Folder**, and pick your `dsc481` folder (or any folder where you keep course work and the practice data files). Everything you create now lives in that folder, and the data files are right beside your code.
+
+### Choose Your Python
+
+VS Code must know which Python to use. Press `Ctrl+Shift+P` (macOS: `Cmd+Shift+P`) to open the **Command Palette**, type `Python: Select Interpreter` and press `Enter`. Pick the one that matches the option you chose:
+
+| You set up | Pick this interpreter |
+|---|---|
+| Option 1, Anaconda | the one named `base` (or `Anaconda3`) |
+| Option 1B, Miniconda | the one named `dsc481` |
+| Option 1C, plain Python | the one inside your folder, in `.venv` |
+
+If you have not made an environment yet, the command `Python: Create Environment` makes one: choose **Venv**, pick a Python, and VS Code creates `.venv` for you. Then open a terminal inside VS Code (**Terminal**, then **New Terminal**) and run the `pip install` line from Option 1C. A library missing later? Install it in this same terminal.
+
+### Run a Python File
+
+1. In the Explorer panel, click the **New File** button and name the file `hello.py`.
+2. Type `print("Hello, Data Science!")` and save with `Ctrl+S`.
+3. Click the **Run Python File** play button at the top right of the editor. The result appears in the **Terminal** panel at the bottom.
+
+### Run a Notebook
+
+1. Press `Ctrl+Shift+P`, type `Create: New Jupyter Notebook` and press `Enter`. You can also create a file that ends in `.ipynb`.
+2. Click **Select Kernel** at the top right and choose the same Python as above. A **kernel** is the engine that runs your code. If VS Code offers to install `ipykernel`, say yes.
+3. Type code in a cell and run it with the **Run** icon at the left of the cell, or with `Shift+Enter`. `Ctrl+Enter` runs the cell and stays on it.
+4. Save with `Ctrl+S`. The file is an ordinary `.ipynb` notebook, so it also opens in Jupyter in the browser.
+
+The first time you run a notebook cell, VS Code may take a few seconds to start the kernel.
 
 ## Running a Script from the Terminal
 

@@ -176,6 +176,10 @@ To write and run Python you need a **Python environment**: a place on your compu
 
 Anaconda is large. If your computer is short of disk space, there are two smaller ways to get Python on your own computer. **Miniconda** is a much smaller version of Anaconda. It has Python and the package installer only, and you add the libraries you need with one command. **Plain Python** skips conda completely. You install Python from python.org and use its own tools, `venv` (makes a separate folder for your libraries) and `pip` (installs them). It is the smallest setup of all. With both, you add the libraries yourself with one command.
 
+### Visual Studio Code
+
+**Visual Studio Code** is a free code editor from Microsoft. It is not a way to get Python. It is a place to write and run Python, and notebooks too, once Python is installed by one of the methods above. Students who like an editor with a file list and a built-in terminal choose it instead of a browser. The setup page explains how.
+
 ### Jupyter Notebook
 
 **Jupyter Notebook** is a tool for writing and running Python in your web browser. You write code in boxes called **cells**. When you run a cell, the result appears right below it. A notebook can also hold text, tables and charts, so it is both a lab book and a report. Anaconda installs Jupyter Notebook for you. With Miniconda or plain Python, you add it with one `pip install` command. Notebook files end with `.ipynb`. We use notebooks for most of this course.
@@ -193,9 +197,14 @@ flowchart TD
     B -- "Everything ready" --> E["Use Anaconda"]
     B -- "Smaller, uses conda" --> D["Use Miniconda"]
     B -- "Smallest, no conda" --> F["Use plain Python<br/>with venv and pip"]
+    E --> G{"Do you prefer an editor<br/>to the browser?"}
+    D --> G
+    F --> G
+    G -- Yes --> H["Add Visual Studio Code"]
+    G -- No --> I["Use Jupyter Notebook<br/>in the browser"]
 ```
 
-All the choices work for this course. Every example in these notes runs the same in each of them. Many students use one tool on their own computer and keep Colab as a backup.
+In the diagram, Visual Studio Code is an extra step, not a way to get Python. First choose how to get Python, then choose where to write your code. All the choices work for this course. Every example in these notes runs the same in each of them. Many students use one tool on their own computer and keep Colab as a backup.
 
 The step-by-step instructions for each option are on the [Setting Up Python](setup.md) page. Follow them at your computer.
 
