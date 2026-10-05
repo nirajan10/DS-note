@@ -30,7 +30,7 @@ No earlier knowledge of programming, Python or AI is needed. Every new word is e
 - **Read in order.** Each unit builds on the one before it.
 - **Every unit page has the same shape:** learning objectives, topics, a quick recap, exercises, and a link to exam questions.
 - **Run the code yourself.** Every code block works as written. The result you should see is shown right under it. Set up Python first on the [setup page](setup.md).
-- **Look for the boxes.** "Common Mistake" shows where beginners slip. "Ask the Class" is a question to answer before reading on.
+- **Look for the boxes.** "Common Mistake" shows where beginners slip. "Question" is a quick question to answer before reading on.
 - **Try the exercises before opening the answer.** The answers are hidden on purpose.
 - **Practice at the computer.** Use the [lab sheets](practicals.md). The data files used in the notes are listed on the [setup page](setup.md#practice-data-files).
 

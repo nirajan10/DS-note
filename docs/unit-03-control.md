@@ -65,7 +65,7 @@ print("Checked")
 Checked
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     A student has 62 marks and 70% attendance. The rule needs both conditions. Why did the word "Eligible" not print?
 
@@ -298,7 +298,7 @@ print("Total of present students:", total)
 Total of present students: 322
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     What is the difference? `break` leaves the whole loop. `continue` leaves only this round. Which one would you use to ignore a single bad reading in a list of 1000 sensor readings?
 

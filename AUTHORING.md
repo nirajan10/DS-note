@@ -8,7 +8,7 @@ How the DSC 481 notes are written and rebuilt. Read this first, then read `docs/
 - Simple everyday English, short sentences. Define every technical term in one line the first time it appears (bold the term).
 - Cover exactly what the syllabus lists. Skip history lectures, edge cases and advanced theory unless the syllabus names them.
 - Use relatable data first: student marks, shop sales, mobile data use, cricket scores. Use `Rs.` for money and Nepali names and places (Asha, Bikash, Pokhara, Kathmandu, Butwal).
-- The teacher reads each section aloud in class, so every section must read well out loud. Add an occasional "Ask the Class" box.
+- The teacher reads each section aloud in class, so every section must read well out loud. Add an occasional "Question" box.
 - No emoji. No jokes that need culture to understand. No filler.
 
 ## Page template (every unit page)
@@ -178,7 +178,7 @@ Put node text containing symbols or punctuation in double quotes. Keep diagrams 
 
 ## Other markup (all enabled in `mkdocs.yml`)
 
-- Boxes: `!!! abstract "Learning Objectives"`, `!!! warning "Common Mistake"`, `!!! ask "Ask the Class"` (custom), `!!! tip`, `!!! note`.
+- Boxes: `!!! abstract "Learning Objectives"`, `!!! warning "Common Mistake"`, `!!! ask "Question"` (custom), `!!! tip`, `!!! note`.
 - Collapsible answers: `??? success "Answer"` (content indented four spaces). `???+` opens by default.
 - Tabs: `=== "Windows"` blocks. Definition lists (`Term` newline `: meaning`) are fine for glossaries.
 - Tables with pipes. Checklists `- [ ] item`.

@@ -132,7 +132,7 @@ print(marks[3:])
 [45, 88]
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     `marks` has 5 items. What is the index of the last item? What does `marks[1:3]` give?
 
@@ -440,7 +440,7 @@ The same operations also exist as methods: `a.union(b)`, `a.intersection(b)` and
 
     To get an item in a fixed order, turn the set into a sorted list first: `sorted(visitors)[0]`.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     A shop has a list of 500 sales and each sale has a city. Which structure gives the number of different cities in one line? Which operation would show customers who bought in both January and February?
 
@@ -643,7 +643,7 @@ Topper: Sita with 180
     3     Ram    45       52
     ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     In `students[2]["math"]`, what is `students[2]`? What is the final value? What would `students[4]` do?
 

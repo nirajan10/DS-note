@@ -414,7 +414,7 @@
 .md-typeset .example,
 .md-typeset .quote { --ds-adm: var(--ds-c-plain); }
 
-/* Custom "Ask the Class" box reuses Material's question-mark icon */
+/* Custom "Question" box reuses Material's question-mark icon */
 .md-typeset .ask > .admonition-title::before,
 .md-typeset .ask > summary::before {
   -webkit-mask-image: var(--md-admonition-icon--question);

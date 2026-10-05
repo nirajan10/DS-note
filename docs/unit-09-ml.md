@@ -124,7 +124,7 @@ flowchart TD
 | Everyday example 2 | predict Pass or Fail | group news stories by topic, with no topics given |
 | Kinds covered in this unit | regression, classification | clustering |
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Sort these four tasks. For each one, is it supervised or unsupervised? If supervised, does it predict a number or a category?
 
@@ -244,7 +244,7 @@ Almost every dot sits close to the line. That is why the line makes useful predi
     ValueError: Expected a 2-dimensional container but got <class 'pandas.Series'> instead. Pass a DataFrame containing a single row (i.e. single sample) or a single column (i.e. single feature) instead.
     ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Our students studied between 0.5 and 8.8 hours. Would you trust the line to predict the marks of a student who studies 20 hours? Why not?
 
@@ -468,7 +468,7 @@ plt.show()
 ![Scatter plot of 90 shop customers by monthly visits and monthly spend, in three separate groups. Each group has its own colour and marker, and a large cross marks the centre of each group.](assets/img/u09-clusters.png#only-light)
 ![Scatter plot of 90 shop customers by monthly visits and monthly spend, in three separate groups. Each group has its own colour and marker, and a large cross marks the centre of each group.](assets/img/u09-clusters-dark.png#only-dark)
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     The shop owner sees these three groups. What would you call each group? What could the shop do differently for each one?
 
@@ -588,7 +588,7 @@ Training rows: 48
 Test rows: 12
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     A student already saw the answers to the practice questions and scores 100% on them. Does that prove she will pass the final exam? How is this like testing a model on its own training data?
 
@@ -697,7 +697,7 @@ Each row is what the student really got. Each column is what the model said. The
 
 The correct answers lie on the diagonal, from top left to bottom right. Everything off the diagonal is a mistake. (If "Pass" is treated as the positive class, these four cells are also called true positives, true negatives, false negatives and false positives, in the order of the table.) The test set has only 12 students, so one extra mistake would change the accuracy by about 8 points. Small test sets give shaky scores.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Our model made 2 mistakes of one kind and none of the other. For a teacher who wants to help weak students, which mistake is worse: calling a failing student "Pass", or calling a passing student "Fail"? Why?
 

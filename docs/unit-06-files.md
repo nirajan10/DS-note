@@ -91,7 +91,7 @@ Total: 234
 
 `split()` cuts a string at the spaces and gives a list. The mark `"78"` is a string, so we turn it into a number with `int()` before adding.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     After the loop has read all three lines, what would one more call to `f.readline()` give?
 
@@ -384,7 +384,7 @@ None
 
 The `None` lines appear because a function that ends without `return` gives back `None`.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Which `except` line runs for `average("683", "0")`? And which one runs for `average("six", "0")`? (Python stops at the first problem it meets.)
 

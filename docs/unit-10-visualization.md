@@ -80,7 +80,7 @@ plt.show()
 
 The numbers are three weeks of sales added together. On the light page, the darker the blue, the bigger the number. On the dark page the scale is turned around: the brighter the blue, the bigger the number. Each page has its colour bar to tell you. The Grocery row has the strongest colours: grocery brings in the most money on every weekday, and the single biggest cell is Grocery on Thursday (Rs. 4400). A `0` means that the category sold nothing on that weekday. The strongest cells tell the shop owner where to look first.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     In a correlation heatmap, what colour would you expect for the cell "temperature against sales of woollen caps"? Why?
 
@@ -117,7 +117,7 @@ How to read it. Each panel is a scatter plot. The column name on the left is the
 
 Look at the petal length and the petal width panels. The setosa flowers sit in their own corner, far from the others. So a flower with a tiny petal is almost certainly a setosa. Versicolor and virginica overlap a little, so they are harder to tell apart. One picture has told us which measurements separate the groups. This is a very useful first look before a machine learning model in [Unit IX](unit-09-ml.md).
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     A pair plot of a table with 8 number columns has how many panels? Would you still be able to read it on one page?
 
@@ -301,7 +301,7 @@ The output above is what Dash prints when it starts. The app is now a small web 
 
 *A screenshot of the running app in a browser, taken after choosing "Sat". It is one picture for both light and dark pages, because the dashboard has its own light design.*
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     In this app, which part is the input, which part is the callback and which part is the output? What would happen if you added a second dropdown for `time` to the layout but did not change the callback?
 

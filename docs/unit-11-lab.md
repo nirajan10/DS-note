@@ -75,7 +75,7 @@ This unit is a lab, not a lecture. There is very little new theory. You already 
     Day 6 ALERT: 3100 MB
     ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Day 7 has 640 MB, but the program never printed it. Why?
 
@@ -327,7 +327,7 @@ This unit is a lab, not a lecture. There is very little new theory. You already 
     ['F', 'M']
     ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     The mark 880 is clearly a typing mistake. What would happen to the class average of maths if we left it in?
 
@@ -487,7 +487,7 @@ Answer the four questions below. Use the statistics tools from [Unit VIII](unit-
     ![Scatter plot of runs against balls faced for 12 batters: the dots rise steadily from lower left to upper right.](assets/img/u11-eda-cricket-balls-runs.png#only-light)
     ![Scatter plot of runs against balls faced for 12 batters: the dots rise steadily from lower left to upper right.](assets/img/u11-eda-cricket-balls-runs-dark.png#only-dark)
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     The correlation is close to 1. Does that prove that facing more balls causes more runs? Or could a third thing, such as batting order or skill, explain both?
 
@@ -548,7 +548,7 @@ Your checklist:
     8 hours -> 71 marks
     ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     The model predicts 58 marks for 6 hours. Will every student who studies 6 hours get exactly 58? What does the prediction really tell us?
 

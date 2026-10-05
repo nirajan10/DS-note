@@ -229,7 +229,7 @@ If a function never reaches a `return`, it gives back the special value `None`, 
 
     The `150` came from the `print` inside the function. If you want to use the answer, use `return`.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     You write a function to calculate tax. Will you use `print` or `return` inside it, if another function needs the tax amount later? Why?
 
@@ -311,7 +311,7 @@ countdown(3)
 Go!
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     In the call `factorial(4)`, which call finishes first: `factorial(4)` or `factorial(1)`? Why?
 

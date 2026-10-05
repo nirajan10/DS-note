@@ -23,7 +23,7 @@ A data scientist does three things again and again. They collect data, they look
 
 Think of a class teacher with the marks of 40 students. A glance at the register shows nothing. After a little work, the teacher can say: "Most students are weak in English, and students with high attendance score better." That sentence is useful. Turning a pile of numbers into such a sentence is data science.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Your mobile phone keeps a record of how much internet data you use each day. What question could that record answer for you?
 
@@ -42,7 +42,7 @@ Data science is not only for big companies. Anyone who has data and a question c
 
 Look at the pattern in the table. Each row starts with a question. Each row uses data that already exists. Each row ends with a better decision.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Pick a place you know, such as your college, a local shop or a bus route. Name one question that its data could answer.
 
@@ -160,21 +160,25 @@ print("Average:", round(average, 2))
 Average: 75.67
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     What do you think `print(type(3.0))` shows: `int` or `float`? Why?
 
 ## 1.2 Python Environment Setup (Anaconda, Jupyter Notebook, Google Colab)
 
-To write and run Python you need a **Python environment**: a place on your computer or on the internet where Python is installed and ready. This course uses three names that students often mix up. They do different jobs.
+To write and run Python you need a **Python environment**: a place on your computer or on the internet where Python is installed and ready. This course uses a few names that students often mix up. They do different jobs.
 
 ### Anaconda
 
-**Anaconda** is a free package that installs Python and many data science libraries in one go. After installing it, you already have `pandas`, `numpy`, `matplotlib` and more. It also installs Jupyter Notebook and a window called Anaconda Navigator, from which you can start your tools. The download is large, so it needs a good internet connection once. After that it works without internet. Choose Anaconda when you want your own Python on your own computer. If your computer is short of disk space, **Miniconda** is a much smaller version of Anaconda. It has Python and the package installer only, and you add the libraries you need with one command. You can also skip conda completely: Python from python.org, with its own `venv` and `pip` tools, is the smallest setup of all.
+**Anaconda** is a free package that installs Python and many data science libraries in one go. After installing it, you already have `pandas`, `numpy`, `matplotlib` and more. It also installs Jupyter Notebook and a window called Anaconda Navigator, from which you can start your tools. The download is large, so it needs a good internet connection once. After that it works without internet. Choose Anaconda when you want your own Python on your own computer.
+
+### Miniconda and Plain Python
+
+Anaconda is large. If your computer is short of disk space, there are two smaller ways to get Python on your own computer. **Miniconda** is a much smaller version of Anaconda. It has Python and the package installer only, and you add the libraries you need with one command. **Plain Python** skips conda completely. You install Python from python.org and use its own tools, `venv` (makes a separate folder for your libraries) and `pip` (installs them). It is the smallest setup of all. With both, you add the libraries yourself with one command.
 
 ### Jupyter Notebook
 
-**Jupyter Notebook** is a tool for writing and running Python in your web browser. You write code in boxes called **cells**. When you run a cell, the result appears right below it. A notebook can also hold text, tables and charts, so it is both a lab book and a report. Anaconda installs Jupyter Notebook for you. Notebook files end with `.ipynb`. We use notebooks for most of this course.
+**Jupyter Notebook** is a tool for writing and running Python in your web browser. You write code in boxes called **cells**. When you run a cell, the result appears right below it. A notebook can also hold text, tables and charts, so it is both a lab book and a report. Anaconda installs Jupyter Notebook for you. With Miniconda or plain Python, you add it with one `pip install` command. Notebook files end with `.ipynb`. We use notebooks for most of this course.
 
 ### Google Colab
 
@@ -185,12 +189,13 @@ To write and run Python you need a **Python environment**: a place on your compu
 ```mermaid
 flowchart TD
     A{"Can you install software<br/>on your computer?"} -- No --> C["Use Google Colab"]
-    A -- Yes --> B{"Is your internet<br/>slow or often down?"}
-    B -- Yes --> D["Use Anaconda and<br/>Jupyter Notebook"]
-    B -- No --> E["Either one works.<br/>Pick the one you like."]
+    A -- Yes --> B{"What suits you?"}
+    B -- "Everything ready" --> E["Use Anaconda"]
+    B -- "Smaller, uses conda" --> D["Use Miniconda"]
+    B -- "Smallest, no conda" --> F["Use plain Python<br/>with venv and pip"]
 ```
 
-Both choices work for this course. Every example in these notes runs the same in either. Many students install Anaconda at home and use Colab as a backup.
+All the choices work for this course. Every example in these notes runs the same in each of them. Many students use one tool on their own computer and keep Colab as a backup.
 
 The step-by-step instructions for each option are on the [Setting Up Python](setup.md) page. Follow them at your computer.
 

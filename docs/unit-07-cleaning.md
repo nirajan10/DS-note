@@ -156,7 +156,7 @@ Number of users: 10
 First name: Leanne Graham
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     What happens to this program if the computer has no internet connection? Why is it a good idea to check `status_code` before using the reply?
 
@@ -194,7 +194,7 @@ Rows before: 11  after dropna: 9
 6    Gita     61.0      0.0
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Would you drop Gita's row, fill her gap with the class mean, or fill it with 0? What does each choice cost us?
 

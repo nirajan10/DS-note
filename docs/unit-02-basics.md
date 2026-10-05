@@ -116,7 +116,7 @@ print(type(True))
 <class 'bool'>
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     What is the type of `5`, of `5.0`, and of `"5"`? They look alike, but are they the same to Python?
 
@@ -186,7 +186,7 @@ False
 72
 ```
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Without running it, what are `10 % 3`, `10 // 3` and `2 ** 3`?
 
@@ -308,7 +308,7 @@ Percentage: 75.67%
 
 Each `input()` is wrapped in `int()` so that the marks become numbers. To run it as a script, save the code as `marks.py` and type `python marks.py` in a terminal (see [Setting Up Python](setup.md#running-a-script-from-the-terminal)). In a notebook, put it in a cell and press `Shift+Enter`.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     What would happen if we wrote `math = input("Enter marks in Maths: ")` without `int()`? On which line would Python complain?
 

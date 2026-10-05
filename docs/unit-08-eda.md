@@ -62,7 +62,7 @@ Data median: 936.0
 
 One strange day pulled the mean of the phone data up by more than 200 MB. The median hardly noticed. A value far away from the rest is called an **outlier**. When a column has outliers, the median describes a typical day better than the mean.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Most days this phone uses about 900 MB. Someone says "this phone uses 1155 MB a day". Is that fair? Which number would you quote instead?
 
@@ -486,7 +486,7 @@ plt.show()
 
 How to read one box: the line inside is the **median**. The box runs from Q1 to Q3, so it holds the middle half of the values. The thin lines (**whiskers**) reach the smallest and largest normal values. A dot beyond a whisker is an **outlier**. English has the shortest box, so its marks are the most alike. No subject has outliers here.
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     A shop owner wants to know whether sales were higher on weekends than on weekdays. Which chart from the table would you draw, and why?
 
@@ -619,7 +619,7 @@ The best way to feel these numbers is to see them. The figure shows three made-u
 ![Three scatter plots: hours studied against marks rises steeply (r = +0.94), shoe size against marks is a shapeless cloud (r = 0.00), and days absent against marks falls steeply (r = -0.91).](assets/img/u08-correlation.png#only-light)
 ![Three scatter plots: hours studied against marks rises steeply (r = +0.94), shoe size against marks is a shapeless cloud (r = 0.00), and days absent against marks falls steeply (r = -0.91).](assets/img/u08-correlation-dark.png#only-dark)
 
-!!! ask "Ask the Class"
+!!! ask "Question"
 
     Name two things from daily life that you expect to have a positive correlation, and two that you expect to have a negative one. For example: temperature and cold-drink sales, or the age of a phone and its price.
 
