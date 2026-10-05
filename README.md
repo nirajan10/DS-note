@@ -4,6 +4,7 @@ Lecture notes and lab sheets for **DSC 481 Fundamentals of Data Science**, BCSIT
 Built with [MkDocs](https://www.mkdocs.org/) and the [Material](https://squidfunnel.github.io/mkdocs-material/) theme.
 Every code example has been run, and the output shown under it is the real output.
 
+
 ## Quick start
 
 ```bash
