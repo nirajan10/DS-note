@@ -170,7 +170,7 @@ To write and run Python you need a **Python environment**: a place on your compu
 
 ### Anaconda
 
-**Anaconda** is a free package that installs Python and many data science libraries in one go. After installing it, you already have `pandas`, `numpy`, `matplotlib` and more. It also installs Jupyter Notebook and a window called Anaconda Navigator, from which you can start your tools. The download is large, so it needs a good internet connection once. After that it works without internet. Choose Anaconda when you want your own Python on your own computer.
+**Anaconda** is a free package that installs Python and many data science libraries in one go. After installing it, you already have `pandas`, `numpy`, `matplotlib` and more. It also installs Jupyter Notebook and a window called Anaconda Navigator, from which you can start your tools. The download is large, so it needs a good internet connection once. After that it works without internet. Choose Anaconda when you want your own Python on your own computer. If your computer is short of disk space, **Miniconda** is a much smaller version of Anaconda. It has Python and the package installer only, and you add the libraries you need with one command. You can also skip conda completely: Python from python.org, with its own `venv` and `pip` tools, is the smallest setup of all.
 
 ### Jupyter Notebook
 

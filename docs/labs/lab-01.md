@@ -6,12 +6,12 @@ Get a working Python on your computer, or in the browser, and run your first **s
 
 ## What You Need
 
-- A computer with internet for the first setup. [Setting Up Python](../setup.md) shows two ways: **Anaconda** (a free bundle of Python, data tools and Jupyter) or **Google Colab** (Jupyter in the browser, with nothing to install). **Jupyter Notebook** is a page where you run code in small cells.
+- A computer with internet for the first setup. [Setting Up Python](../setup.md) shows two ways: **Anaconda** (a free bundle of Python, data tools and Jupyter), **Miniconda** (a much smaller start, where you add the libraries yourself) or **Google Colab** (Jupyter in the browser, with nothing to install). **Jupyter Notebook** is a page where you run code in small cells.
 - Background: [Unit I](../unit-01-intro.md).
 
 ## Steps
 
-1. Set up one tool. On your computer, follow [Option 1: Anaconda](../setup.md#option-1-anaconda-on-your-computer) and then [Opening Jupyter Notebook](../setup.md#opening-jupyter-notebook). In a browser, follow [Option 2: Google Colab](../setup.md#option-2-google-colab).
+1. Set up one tool. On your computer, follow [Option 1: Anaconda](../setup.md#option-1-anaconda-on-your-computer), [Option 1B: Miniconda](../setup.md#option-1b-miniconda-the-light-alternative) if disk space is small, or [Option 1C: Plain Python](../setup.md#option-1c-plain-python-with-venv-and-pip) if you do not want conda, and then [Opening Jupyter Notebook](../setup.md#opening-jupyter-notebook). In a browser, follow [Option 2: Google Colab](../setup.md#option-2-google-colab).
 2. Make a new folder called `lab1`. Create a file named `hello.py` inside it, as shown in [Running a Script From the Terminal](../setup.md#running-a-script-from-the-terminal). In Jupyter or Colab, open a new notebook instead.
 3. Type the starter code below.
 4. Run it. In a terminal, type `python hello.py`. In Jupyter or Colab, press `Shift+Enter` on the cell.
@@ -37,7 +37,7 @@ Python version: 3.12.3
 pandas version: 3.0.6
 ```
 
-If the third line fails with `ModuleNotFoundError: No module named 'pandas'`, your Python does not have pandas yet. Anaconda and Colab already have it. See [Installing Extra Libraries](../setup.md#installing-extra-libraries).
+If the third line fails with `ModuleNotFoundError: No module named 'pandas'`, your Python does not have pandas yet. Anaconda and Colab already have it, and so does a Miniconda or plain Python environment set up as on the setup page. See [Installing Extra Libraries](../setup.md#installing-extra-libraries).
 
 ## Your Turn
 
@@ -62,7 +62,7 @@ If the third line fails with `ModuleNotFoundError: No module named 'pandas'`, yo
 
 ## Check Yourself
 
-- [ ] I have one working tool: Anaconda, Jupyter or Colab.
+- [ ] I have one working tool: Anaconda, Miniconda, plain Python, Jupyter or Colab.
 - [ ] I ran a script or a cell and saw the output.
 - [ ] I can say what a script is.
 - [ ] I know how to read the version of a library.

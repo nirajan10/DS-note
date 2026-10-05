@@ -1,20 +1,29 @@
 # Setting Up Python
 
-This page gets Python working on your computer, or in your browser, so you can run every example in these notes. Do this once, before Unit II. It takes about 20 to 30 minutes, mostly waiting for a download. You need the ideas from [Unit I, section 1.2](unit-01-intro.md#12-python-environment-setup-anaconda-jupyter-notebook-google-colab) first: what Anaconda, Jupyter Notebook and Google Colab are.
+This page gets Python working on your computer, or in your browser, so you can run every example in these notes. Do this once, before Unit II. It takes about 20 to 30 minutes, mostly waiting for a download. You need the ideas from [Unit I, section 1.2](unit-01-intro.md#12-python-environment-setup-anaconda-jupyter-notebook-google-colab) first: what Anaconda, Jupyter Notebook and Google Colab are. Miniconda (the light version of Anaconda) and plain Python with `venv` and `pip` (no conda at all) are covered here too.
 
 ## Choose Your Tool
 
-You only need one of the two options below. Both run every example in these notes.
+You only need one of the options below. All of them run every example in these notes.
+
+| | Anaconda | Miniconda | Plain Python | Google Colab |
+|---|---|---|---|---|
+| Where it runs | your computer | your computer | your computer | Google's computers, in your browser |
+| Disk space | about 9.7 GB (Anaconda's documentation) | about 900 MB (same source), plus the libraries you add | Python itself, plus the libraries you add | none |
+| What you get | Python, 600+ packages, Jupyter, Anaconda Navigator | Python and conda only | Python and `pip` only | notebooks with the common libraries ready |
+| Extra steps | none | one command to add the libraries | one command to add the libraries | none, but it needs internet all the time |
+| Needs conda? | yes | yes | **no** | no |
 
 ```mermaid
 flowchart TD
     A{"Can you install software<br/>on your computer?"} -- No --> C["Option 2:<br/>Google Colab"]
-    A -- Yes --> B{"Is your internet<br/>slow or often down?"}
-    B -- Yes --> D["Option 1:<br/>Anaconda"]
-    B -- No --> E["Either option works.<br/>Pick the one you like."]
+    A -- Yes --> B{"What suits you?"}
+    B -- "Everything ready" --> E["Option 1:<br/>Anaconda"]
+    B -- "Smaller, uses conda" --> D["Option 1B:<br/>Miniconda"]
+    B -- "Smallest, no conda" --> F["Option 1C:<br/>Plain Python"]
 ```
 
-Many students do both. Anaconda is your main tool at home, and Colab is the backup when you are on someone else's computer.
+Many students do both a local tool and Colab. Your own Python is your main tool at home, and Colab is the backup when you are on someone else's computer.
 
 ## Option 1: Anaconda on Your Computer
 
@@ -78,18 +87,127 @@ Many students do both. Anaconda is your main tool at home, and Colab is the back
 
     A long list of packages and version numbers means Anaconda is installed. To open Navigator, type `anaconda-navigator`.
 
+## Option 1B: Miniconda, the Light Alternative
+
+**Miniconda** is a small version of Anaconda. It installs only **conda** (the tool that installs packages), Python, and what they need. It has no Anaconda Navigator window and no data libraries. You add the libraries yourself, with one command. Choose it when disk space is small or the computer is old. Do this section instead of Option 1, not as well.
+
+1. Open the official download page, [anaconda.com/download](https://www.anaconda.com/download), and pick **Miniconda**. The page may ask you to register first. Follow what it shows.
+2. Download the installer for your operating system and install it as below.
+
+=== "Windows"
+
+    1. Download the **Windows 64-bit Graphical Installer** and double-click it. Do not start it from the Favorites folder.
+    2. Choose **Just Me**. Keep the default folder, or one without spaces or special characters.
+    3. Leave **Add Miniconda3 to my PATH environment variable** switched off. Anaconda does not recommend it.
+    4. Finish the install. Open the Start menu, search for **Anaconda Prompt** and open it. You should see `(base)` at the start of the line.
+
+=== "macOS"
+
+    1. Download the macOS installer from the same page and run it. Click through the screens and agree to the terms.
+    2. Open the **Terminal** app. You should see `(base)` at the start of the line. If you do not, close the terminal and open a new one.
+
+    The wording of the macOS screens may differ from one version to the next. Follow what the installer shows.
+
+=== "Linux"
+
+    1. Download the Linux installer, a `.sh` file. The common name is `Miniconda3-latest-Linux-x86_64.sh` (`aarch64` instead of `x86_64` on ARM computers).
+    2. In a terminal, run it with `bash`:
+
+        ```bash
+        bash Miniconda3-latest-Linux-x86_64.sh
+        ```
+
+    3. Press `Enter` to read the terms, type `yes` to agree, press `Enter` to keep the default folder, and type `yes` when it asks whether to initialize conda.
+    4. Close the terminal and open a new one. You should see `(base)` at the start of the line.
+
+### Add the Course Libraries
+
+Miniconda starts empty, so create an **environment** for the course. An environment is a separate folder with its own Python and its own libraries, so this course cannot disturb anything else on your computer. Type these three commands in Anaconda Prompt (Windows) or the terminal (macOS and Linux). The last one downloads the libraries and may take several minutes.
+
+```bash
+conda create -n dsc481 python=3.12 -y
+conda activate dsc481
+pip install notebook pandas numpy matplotlib seaborn scikit-learn openpyxl requests plotly dash
+```
+
+After `conda activate dsc481` you should see `(dsc481)` at the start of the line. **Every time you open a new terminal, type `conda activate dsc481` first.** To check that it worked:
+
+```bash
+python -c "import pandas, sklearn; print('Ready')"
+```
+
+If conda stops and asks you to accept terms of service, read the message. It prints the command to run. Then start Jupyter Notebook from the terminal, as shown in the next section.
+
+## Option 1C: Plain Python with `venv` and `pip`
+
+This option uses only Python itself. There is no conda and no Anaconda. Python comes with **`venv`**, a tool that makes an **environment** (a separate folder with its own Python and its own libraries), and **`pip`**, the tool that installs libraries into it. Choose it when you want the smallest setup, or when Python is already on your computer. Do this section instead of Option 1 or 1B.
+
+### Install Python
+
+1. Open the official download page, [python.org/downloads](https://www.python.org/downloads/), and download Python 3 for your system. A recent version (3.11 or newer) is safest, because the libraries used in these notes are recent.
+2. On Windows, run the installer. If it offers to add Python to your `PATH`, accept, so the `python` command works in a terminal. On macOS, run the installer from python.org. On Linux, Python 3 is usually there already. On Ubuntu or Debian, you may also need `sudo apt install python3-venv python3-pip`.
+3. Open a terminal (Command Prompt or PowerShell on Windows, **Terminal** on macOS and Linux) and check:
+
+```bash
+python --version
+```
+
+On macOS and Linux the command may be `python3 --version` instead. On Windows, `py --version` also works. You should see a version number such as `Python 3.12.3`. Use the same command name (`python` or `python3`) in the steps below.
+
+### Make an Environment and Add the Libraries
+
+Make one folder for the course and create the environment inside it.
+
+=== "Windows"
+
+    ```bash
+    mkdir dsc481
+    cd dsc481
+    python -m venv .venv
+    .venv\Scripts\activate.bat
+    ```
+
+    In **PowerShell**, use `.venv\Scripts\Activate.ps1` for the last line. If PowerShell refuses to run it, type this once, then try again:
+
+    ```bash
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+
+=== "macOS and Linux"
+
+    ```bash
+    mkdir dsc481
+    cd dsc481
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
+
+After activation you should see `(.venv)` at the start of the line. Now install the course libraries. This downloads a few hundred megabytes and may take several minutes.
+
+```bash
+pip install notebook pandas numpy matplotlib seaborn scikit-learn openpyxl requests plotly dash
+```
+
+Check that it worked:
+
+```bash
+python -c "import pandas, sklearn; print('Ready')"
+```
+
+**Every time you open a new terminal, go to the folder and activate the environment first:** `cd dsc481`, then the activate line for your system. Type `deactivate` to leave it. Then start Jupyter Notebook from the terminal, as shown in the next section. Keep your notebooks and the practice data files in the `dsc481` folder.
+
 ## Opening Jupyter Notebook
 
 There are two ways to start **Jupyter Notebook**. Both open it in your web browser.
 
-**From Anaconda Navigator**
+**From Anaconda Navigator** (Anaconda only; Miniconda and plain Python have no Navigator, so use the terminal way below)
 
 1. Open Anaconda Navigator.
 2. On the **Home** tab, find the **Jupyter Notebook** tile and click its **Launch** button.
 
 **From a terminal**
 
-1. Open **Anaconda Prompt** (Windows) or the **Terminal** app (macOS and Linux).
+1. Open **Anaconda Prompt** (Windows) or the **Terminal** app (macOS and Linux). If you use Miniconda, type `conda activate dsc481` first. If you use plain Python, go to your `dsc481` folder and activate `.venv` first.
 2. Move into the folder where you keep your course work. For example, `cd Documents/dsc481`.
 3. Type the command below and press `Enter`.
 
@@ -207,13 +325,13 @@ Your version numbers may be different from the ones shown here, and that is fine
 
 ## Installing Extra Libraries
 
-Anaconda already has most of the libraries listed above. A few, such as `dash` (Unit X) and `openpyxl` (for Excel files in Unit VII), may be missing. Install them from a terminal (Anaconda Prompt on Windows). Use `pip`, Python's own installer:
+Anaconda already has most of the libraries listed above. (With Miniconda or plain Python you already installed them, so nothing is missing; if you skipped one, use `pip` as below, with your environment active.) A few, such as `dash` (Unit X) and `openpyxl` (for Excel files in Unit VII), may be missing. Install them from a terminal (Anaconda Prompt on Windows). Use `pip`, Python's own installer:
 
 ```bash
 pip install openpyxl dash
 ```
 
-Or use `conda`, which is Anaconda's installer:
+Or, if you use Anaconda or Miniconda, use `conda`, which is their installer:
 
 ```bash
 conda install -c conda-forge openpyxl dash
