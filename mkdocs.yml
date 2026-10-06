@@ -95,11 +95,11 @@ nav:
   # ---- Notes (one page per unit) ----
   - Units:
       - "I: Data Science and Python": unit-01-intro.md
-      # - "II: Python Basics and Operators": unit-02-basics.md
-      # - "III: Control Structures": unit-03-control.md
-      # - "IV: Functions and Modules": unit-04-functions.md
-      # - "V: Data Structures": unit-05-structures.md
-      # - "VI: File Handling and Exceptions": unit-06-files.md
+      - "II: Python Basics and Operators": unit-02-basics.md
+      - "III: Control Structures": unit-03-control.md
+      - "IV: Functions and Modules": unit-04-functions.md
+      - "V: Data Structures": unit-05-structures.md
+      - "VI: File Handling and Exceptions": unit-06-files.md
       # - "VII: Data Collection and Cleaning": unit-07-cleaning.md
       # - "VIII: Exploratory Data Analysis": unit-08-eda.md
       # - "IX: Machine Learning": unit-09-ml.md
@@ -122,11 +122,11 @@ nav:
   - Exam Questions:
       - Overview: exam-questions.md
       - "Unit I: Data Science and Python": exam/unit-01.md
-      # - "Unit II: Python Basics and Operators": exam/unit-02.md
-      # - "Unit III: Control Structures": exam/unit-03.md
-      # - "Unit IV: Functions and Modules": exam/unit-04.md
-      # - "Unit V: Data Structures": exam/unit-05.md
-      # - "Unit VI: File Handling and Exceptions": exam/unit-06.md
+      - "Unit II: Python Basics and Operators": exam/unit-02.md
+      - "Unit III: Control Structures": exam/unit-03.md
+      - "Unit IV: Functions and Modules": exam/unit-04.md
+      - "Unit V: Data Structures": exam/unit-05.md
+      - "Unit VI: File Handling and Exceptions": exam/unit-06.md
       # - "Unit VII: Data Collection and Cleaning": exam/unit-07.md
       # - "Unit VIII: Exploratory Data Analysis": exam/unit-08.md
       # - "Unit IX: Machine Learning": exam/unit-09.md
