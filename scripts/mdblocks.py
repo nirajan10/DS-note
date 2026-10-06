@@ -247,6 +247,7 @@ except BaseException:
 def _env():
     env = dict(os.environ)
     env.update(
+        USER="asha", LOGNAME="asha",   # what getpass.getuser() reports in the examples
         PYTHONUNBUFFERED="1", PYTHONHASHSEED="0", PYTHONIOENCODING="utf-8",
         MPLBACKEND="Agg", COLUMNS="80", LC_ALL="C.UTF-8", NO_COLOR="1",
         MPLCONFIGDIR=str(Path(tempfile.gettempdir()) / "mplconfig-notes"),
@@ -293,6 +294,7 @@ def run_code(code, files=None, stdin=(), timeout=240, serve=None, script="exampl
                 os.killpg(proc.pid, signal.SIGTERM)  # also stops Dash's auto-reload child
                 out, _ = proc.communicate(timeout=20)
                 ok = "Traceback" not in out
+            out = out.replace(sys.executable, f"{tmp}/.venv/bin/python")
             result = (ok, out.replace(str(tmp), "/home/student/project").rstrip("\n"))
             _cache[key] = result
             return result
@@ -301,7 +303,8 @@ def run_code(code, files=None, stdin=(), timeout=240, serve=None, script="exampl
                 [sys.executable, "_shim.py"], cwd=tmp, env=_env(), capture_output=True,
                 text=True, timeout=timeout, stdin=subprocess.DEVNULL,
             )
-            out = (p.stdout + p.stderr).replace(str(tmp), "/home/student/project")
+            out = (p.stdout + p.stderr).replace(sys.executable, f"{tmp}/.venv/bin/python")
+            out = out.replace(str(tmp), "/home/student/project")
             result = (p.returncode == 0, out.rstrip("\n"))
         except subprocess.TimeoutExpired:
             result = (False, f"TIMEOUT after {timeout}s")
