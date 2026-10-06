@@ -222,3 +222,6 @@ __marimo__/
 # MkDocs privacy plugin cache
 .cache/
 /site-all
+
+# slide builder
+slides/node_modules/

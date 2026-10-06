@@ -6,6 +6,7 @@
 #   make figures   rebuild every PNG in docs/assets/img (light and dark)
 #   make data      rebuild the small CSV / JSON / XLSX files in docs/assets/data
 #   make examples  re-run every Python example and rewrite its Output block
+#   make slides    rebuild slides/unit-01-intro.pptx (needs: cd slides && npm install)
 #   make check     examples match real output + strict builds (all topics, and as released) + HTML checks
 
 VENV   ?= .venv
@@ -13,7 +14,7 @@ PY     := $(VENV)/bin/python
 MKDOCS := $(VENV)/bin/mkdocs
 export NO_MKDOCS_2_WARNING := true
 
-.PHONY: install serve build build-all figures data examples check
+.PHONY: install serve build build-all figures data examples slides check
 
 install:
 	python3 -m venv $(VENV)
@@ -37,6 +38,9 @@ data:
 
 examples:
 	$(PY) scripts/run_examples.py --write
+
+slides:
+	cd slides && node build_unit01.js
 
 check:
 	$(PY) scripts/run_examples.py --check
