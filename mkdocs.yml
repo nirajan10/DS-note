@@ -109,7 +109,7 @@ nav:
   - Lab Sheets:
       - Overview: practicals.md
       - "Lab 1: Set Up Python and Run a First Script": labs/lab-01.md
-      # - "Lab 2: Variables, Data Types and Operators": labs/lab-02.md
+      - "Lab 2: Variables, Data Types and Operators": labs/lab-02.md
       # - "Lab 3: Conditions, Loops, Break and Continue": labs/lab-03.md
       # - "Lab 4: Functions and Modules": labs/lab-04.md
       # - "Lab 5: Lists, Tuples, Sets and Dictionaries": labs/lab-05.md
